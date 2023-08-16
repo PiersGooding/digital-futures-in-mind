@@ -1,0 +1,59 @@
+
+@mixin h1-content($weight-font){font-size: 80px; line-height: 90px; font-weight:$weight-font;}
+@mixin sub-content($weight-font){font-size: 42px; line-height: 52px; font-weight:$weight-font;}
+@mixin h2-content2{font-size: 35px !important; line-height: 42px !important; font-weight: 400 !important; margin: 0; padding-bottom: 15px;}
+@mixin h2-comfont{font-size: 20px !important; line-height: 30px !important; font-weight: 500 !important;}
+@mixin commontext-format{font-size: 14px; line-height: 24px;}
+@mixin top-panel{font-size: 12px; line-height: 30px; color: #fff !important;}
+@mixin commonflex{display: flex; align-items: center; justify-content: space-between;}
+@mixin flex-left{display: flex; align-items: center; justify-content: flex-start;}
+@mixin flex-top{display: flex; align-items: flex-start; justify-content: flex-start;}
+@mixin flex-center{display: flex; align-items: center; justify-content: center;}
+@mixin end-flex{display: flex; align-items: center; justify-content: flex-end;}
+@mixin skybox{background: #e1f4fd; border: 1px solid #6dcff6; color: $h1-color; padding:35px 20px; margin-top: 20px; margin-bottom: 40px;}
+@mixin common-content-area{border:1px solid #E0F0FA; padding:10px; margin-bottom: 10px; box-shadow: 0px 2px 10px #ababab3b; }
+@mixin index-content{color:$index-content; font-size:20px; font-weight:400;}
+@mixin index-heading{color:$index-content; font-size:16px; line-height: 24px; font-weight:600;}
+@mixin index-heading-flex{display: flex; justify-content: center;  align-items: center;}
+@mixin index-content-num{color:$index-content; font-size:14px; line-height: 22px; font-weight:400;}
+@mixin no-margin-padding{margin: 0; padding: 0;}
+@mixin left-padd{margin: 0; padding: 5px 0 5px 62px;}
+@mixin general-btn{display: inline-flex; align-items: baseline;justify-content: space-evenly;}
+@mixin neon-box{font-style: italic;	padding:35px 20px;background: #f7fdff; margin:20px 0 30px 0;font-size: 16px !important;
+	line-height: 24px !important;font-weight: 400 !important;text-align: left;}
+@mixin footer-posiion{display: flex; align-items: flex-start; justify-content: center; flex-direction: column;}
+@mixin foot-heading{font-size: 16px !important; line-height: 24px !important; font-weight: 500 !important;}
+
+@mixin show () {
+  display: block;
+  animation: grow .5s ease-in-out; // optional animation
+}
+
+@mixin hide () {
+  display: none;
+}
+
+
+// MIXINS AND VARIABLES
+@mixin MQ($canvas) {
+	@media (max-width: $canvas) { @content; }
+}
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+@mixin transform($args...) {
+	-webkit-transform: $args;
+	-moz-transform: $args;
+	-ms-transform: $args;
+	-o-transform: $args;
+	transform: $args;
+}
+@mixin MQH($canvas) {
+    @media (max-height: $canvas) { @content; }
+}
+
+
